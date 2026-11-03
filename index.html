@@ -4,85 +4,237 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Les Trésors de Romy</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fff8ff;color:#352252}
-header{background:#793cce;color:white;padding:25px;text-align:center}
-nav a{color:white;margin:10px;text-decoration:none;font-weight:bold}
-.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#ffe0f1,#e4d9ff)}
-h1{font-size:40px;color:#7134bc}
-h2{text-align:center;color:#7134bc}
-.hero p{font-size:20px}
-.btn{display:inline-block;background:#23b77a;color:white;padding:15px 25px;border-radius:30px;text-decoration:none;font-weight:bold}
-section{padding:35px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1100px;margin:auto}
-.card{background:white;border-radius:20px;padding:25px;text-align:center;box-shadow:0 5px 20px #ddd}
-.emoji{font-size:65px}
-.card h3{color:#7134bc}
-.badge{background:#ffdd69;padding:10px;border-radius:20px;display:inline-block}
-footer{background:#352252;color:white;text-align:center;padding:30px}
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff8ff;
+  color: #352252;
+}
+
+header {
+  background: #793cce;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+header h2 { color: white; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #ffe2f0, #e7ddff);
+}
+
+.logo {
+  width: 280px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+}
+
+h1, h2 { color: #793cce; }
+
+h1 { font-size: 40px; }
+
+section { padding: 45px 20px; }
+
+.section-title { text-align: center; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px #dddddd;
+  border-top: 7px solid var(--color);
+}
+
+.card h3 { color: var(--color); }
+
+.emoji { font-size: 55px; }
+
+.btn {
+  display: inline-block;
+  background: #23b77a;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.card .btn { background: var(--color); }
+
+.products {
+  background: #f8efff;
+  text-align: center;
+}
+
+.product {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 420px;
+  margin: 25px auto;
+  box-shadow: 0 5px 20px #dddddd;
+}
+
+.product .emoji { font-size: 75px; }
+
+.info { text-align: center; }
+
+footer {
+  background: #352252;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+@media(max-width:600px) {
+  h1 { font-size: 30px; }
+  nav a { display: inline-block; }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<h2 style="color:white">🌈 Les Trésors de Romy 🌈</h2>
-<nav>
-<a href="#accueil">Accueil</a>
-<a href="#catalogue">Catalogue</a>
-<a href="#contact">Informations</a>
-</nav>
+  <h2>🌈 Les Trésors de Romy 🌈</h2>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#categories">Nos activités</a>
+    <a href="#produits">Nos produits</a>
+    <a href="https://payhip.com/LestresorsdeRomy">Boutique 🛍️</a>
+  </nav>
 </header>
 
 <div class="hero" id="accueil">
-<img src="./logo.png" alt="Logo Les Trésors de Romy" style="width:280px;max-width:90%;height:auto;border-radius:20px;">
-<h1>✨ Les Trésors de Romy ✨</h1>
-<p>Apprendre en s'amusant, un trésor à la fois !</p>
-<p>Jeux éducatifs, coloriages et cahiers d'activités à imprimer.</p>
-<a class="btn" href="#catalogue">Découvrir les activités 🎨</a>
+  <img src="./logo.png" class="logo" alt="Logo Les Trésors de Romy">
+
+  <h1>✨ Les Trésors de Romy ✨</h1>
+
+  <h3>Apprendre en s'amusant, un trésor à la fois !</h3>
+
+  <p>Coloriages, jeux éducatifs et cahiers d'activités à imprimer.</p>
+
+  <a class="btn" href="#categories">Découvrir les activités 🎨</a>
 </div>
 
-<section id="catalogue">
-<h2>🧸 Nos petits trésors</h2>
-<div class="grid">
-<div class="card">
-<div class="emoji">🎨</div>
-<h3>Coloriages magiques</h3>
-<p>De jolis coloriages pour développer la créativité.</p>
-<span class="badge">Bientôt disponible</span>
-</div>
+<section id="categories">
+  <h2 class="section-title">🧸 Nos petits trésors</h2>
 
-<div class="card">
-<div class="emoji">🔢</div>
-<h3>J'apprends à compter</h3>
-<p>Des jeux amusants pour découvrir les chiffres.</p>
-<span class="badge">Bientôt disponible</span>
-</div>
+  <div class="grid">
 
-<div class="card">
-<div class="emoji">🧩</div>
-<h3>Jeux éducatifs</h3>
-<p>Labyrinthes, mémory et jeux d'observation.</p>
-<span class="badge">Bientôt disponible</span>
-</div>
+    <div class="card" style="--color:#d63886">
+      <div class="emoji">🎨</div>
+      <h3>Coloriages à imprimer</h3>
+      <p>De jolis dessins pour développer la créativité.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
 
-<div class="card">
-<div class="emoji">📚</div>
-<h3>Cahiers d'activités</h3>
-<p>Des cahiers pédagogiques à imprimer.</p>
-<span class="badge">Bientôt disponible</span>
-</div>
-</div>
+    <div class="card" style="--color:#307ed0">
+      <div class="emoji">✏️</div>
+      <h3>Activités éducatives</h3>
+      <p>Apprendre les lettres, les chiffres et les formes.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
+
+    <div class="card" style="--color:#21976b">
+      <div class="emoji">🧩</div>
+      <h3>Jeux à imprimer</h3>
+      <p>Labyrinthes, jeux de mémoire et d'observation.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
+
+    <div class="card" style="--color:#8d4bd1">
+      <div class="emoji">📚</div>
+      <h3>Cahiers d'activités à imprimer</h3>
+      <p>Des livrets pour apprendre tout en s'amusant.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
+
+    <div class="card" style="--color:#db7a27">
+      <div class="emoji">✂️</div>
+      <h3>Découpages et bricolages</h3>
+      <p>Des activités manuelles pour les petits créateurs.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
+
+    <div class="card" style="--color:#c49a19">
+      <div class="emoji">🎉</div>
+      <h3>Fêtes et événements à imprimer</h3>
+      <p>Anniversaires, Noël et autres moments magiques.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
+
+    <div class="card" style="--color:#288eaa">
+      <div class="emoji">🔤</div>
+      <h3>Apprendre à lire et à écrire</h3>
+      <p>Des exercices ludiques pour progresser.</p>
+      <a class="btn" href="#produits">Voir les produits</a>
+    </div>
+
+  </div>
 </section>
 
-<section id="contact" style="text-align:center">
-<h2>💜 Boutique en préparation</h2>
-<p>De nouvelles activités arrivent bientôt !</p>
-<p>Les paiements et téléchargements ne sont pas encore activés.</p>
+<section class="products" id="produits">
+  <h2>🛍️ Nos produits</h2>
+
+  <p>Découvrez nos activités et cahiers numériques à imprimer.</p>
+
+  <div class="product">
+    <div class="emoji">🌈📚</div>
+    <h3>Les activités des Trésors de Romy</h3>
+
+    <p>Retrouvez nos créations disponibles dans notre boutique.</p>
+
+    <p>Les photos, les prix et les fiches individuelles seront ajoutés progressivement.</p>
+
+    <a class="btn" href="https://payhip.com/LestresorsdeRomy">
+      Voir les produits sur Payhip 🛒
+    </a>
+  </div>
+</section>
+
+<section class="info">
+  <h2>💜 Comment ça marche ?</h2>
+
+  <p>1. Choisissez une activité.</p>
+  <p>2. Consultez son prix et sa description sur Payhip.</p>
+  <p>3. Achetez et téléchargez votre fichier numérique.</p>
+  <p>4. Imprimez-le à la maison et amusez-vous !</p>
+
+  <a class="btn" href="https://payhip.com/LestresorsdeRomy">
+    Accéder à la boutique
+  </a>
 </section>
 
 <footer>
-<p>🌈 Les Trésors de Romy</p>
-<p>Apprendre, jouer et grandir !</p>
+  <h3>🌈 Les Trésors de Romy 🌈</h3>
+  <p>Apprendre, jouer et grandir !</p>
 </footer>
+
 </body>
 </html>
